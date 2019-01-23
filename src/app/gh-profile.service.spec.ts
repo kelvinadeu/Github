@@ -8,8 +8,7 @@ describe('GhProfileService', () => {
      providers:[GhProfileService]
    });
  });
-  it('should be created', () => {
-    const service: GhProfileService = TestBed.get(GhProfileService);
+  it('should be created',inject([GhProfileService]),(service:GhProfileService) => {
     expect(service).toBeTruthy();
-  });
+  }));
 });
