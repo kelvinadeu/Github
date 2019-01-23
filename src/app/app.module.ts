@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { GitProfileComponent } from './git-profile/git-profile.component';
 import { IntroComponent } from './intro/intro.component';
+import { PageComponent } from './page/page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     GitProfileComponent,
-    IntroComponent
+    IntroComponent,
+    PageComponent
   ],
   imports: [
     BrowserModule,
