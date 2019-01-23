@@ -7,7 +7,7 @@ import {IntroComponent} from '../intro/intro.component';
 import {PageNotFoundomponent} from '../page-not-found/page-not-found.component';
 
 const routes:Routes = [
-  {path."git-profile",component:GitProfileComponent},
+  {path:"git-profile",component:GitProfileComponent},
   {path:"intro",component:IntroComponent},
   {path:"",redirect:"/intro",pathMatch:"full"},
   {path:"**",Component:PageNotFoundomponent}
