@@ -18,11 +18,16 @@ import {HighlightDirective} from './highlight.directive';
     AppComponent,
     GitProfileComponent,
     IntroComponent,
-    PageComponent
+    PageComponent,
+    BoldenPipe,
+    HighlightDirective
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    HttpModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
