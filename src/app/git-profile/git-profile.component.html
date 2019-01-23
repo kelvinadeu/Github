@@ -1,3 +1,60 @@
 <p>
   git-profile works!
 </p>
+<div class="Form">
+  <form method="">
+    <div class="form-group">
+      <div class="row">
+        <div class="col-md-6">
+          <input type="text" class="form-control" id="enter username!" [(ngmodel)]="username" name="username">
+
+        </div>
+        <div class="col-md-3">
+          <button class="button" (click)="searchProfile">search</button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </form>
+  <div *ngif="profile">
+    <div class="panel">
+
+    </div>
+
+  </div>
+  <div class="row">
+    <div class="col-md-">
+      <img src="{{profile.avatar_url}}" class="img-circle img-responsive" alt="{{profile.login}}">
+
+    </div>
+    <ul>
+      <li>{{profile.name | bolden}} &mdash;{{profile.login}}</li>
+      <li>{{profile.location}}</li>
+      <li *ngIf="profile.bio">{{profile}}</li>
+      <li *ngIf="profile.blog"><a href="{{profile.blog}}" target="_blank">{{profile.blog}}</a></li>
+      <li *ngIf="profile.email"><a href="emailto:{{profile.email}}">{{profile.email}}</a></li>
+    </ul>
+
+  </div>
+  <div>
+    <p>
+      <span>followers {{profile.followers}}</span>
+      <span>Following {{profile.following}}</span>
+      <span>Repositories{{profile.public_repos}}</span>
+    </p>
+    <p><a href="{{profile.html_url}}" target="_blank" class="button btn-md">view profile on Github</a></p>
+    <h3 class="panel-heading">Repositories</h3>
+
+  </div>
+  <div class="panel-body" ngFor="let repo of reposArray">
+    <p class="clearfix">
+      {{repo.name}} <a href="{{repo.html_url}}" target="_blank" class="button btn-md pll-right">view this project on Github</a>
+    </p>
+    <p>{{repo.description}}</p>
+
+  </div>
+
+</div>
