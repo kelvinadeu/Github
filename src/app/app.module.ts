@@ -29,7 +29,7 @@ import {HighlightDirective} from './highlight.directive';
     HttpModule,
     FormsModule,
   ],
-  providers: [],
+  providers: [GhProfileService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
