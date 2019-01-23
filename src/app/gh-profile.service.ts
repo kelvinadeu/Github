@@ -70,8 +70,15 @@ export class GhProfileService {
             this.repos.description = repo.description;
             this.reposArray.push(this.repos);
             this.repos = new Repo("","","");
-          }
+          },
+          error=>{
+            console.log("Error occured")
+          })
         })
+        return promise;
+      }
+      updateProfile(username:string){
+        this.username = username;
       }
     }
   }
