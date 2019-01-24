@@ -1,20 +1,21 @@
 <p>
   git-profile works!
 </p>
-<div id="form">
-  <form action="">
-    <div class="form-group">
-      <div class="row">
-        <div class="col-md-8">
-          <input type="text" class="form-control" placeholder="Search the username of any github user!" [(ngModel)]="username" name="username">
-        </div>
-        <div class="col-sm-4">
-          <button class="btn" (click)="searchProfile()"></button>
-          <input type="text" class="form-control" placeholder="Search the username of any github user!" [(ngModel)]="username" name="username">
+<div class="container">
+  <div id="form">
+    <form action="">
+      <div class="form-group">
+        <div class="row">
+          <div class="col-md-8">
+            <input type="text" class="form-control" placeholder="Search of any github user!">
+          </div>
+          <div class="col-sm-4">
+            <button class="btn" (click)="searchProfile()">search</button>
+          </div>
         </div>
       </div>
-    </div>
-  </form>
+    </form>
+  </div>
 </div>
 <div *ngIf="profile">
   <div class="panel">
