@@ -1,26 +1,26 @@
-<div class="container">
+<div class="container"style="background-image: linear-gradient(rgb(153, 103, 198), rgb(160, 171, 226));">
   <div id="form">
     <form action="">
       <div class="form-group">
         <div class="row">
           <div class="col-md-8">
-            <input type="text" class="form-control" placeholder="Search of any github user!">
+            <input type="text" class="form-control" placeholder="Search of any github user!" style="width:600px; margin-top:20px; margin-left:350px; height:35px">
           </div>
           <div class="col-sm-4">
-            <button class="btn" (click)="searchProfile()">search</button>
+            <button class="btn" (click)="searchProfile()"style="margin-left:895px; height:30px;">search</button>
           </div>
         </div>
       </div>
     </form>
   </div>
   <div *ngIf="profile">
-    <div class="panel">
+    <div class="panel trial">
       <div class="panel-heading">
 
       </div>
       <div class="panel-body">
         <div class="row">
-          <div class="col-sm-3">
+          <div class="col-sm-4">
 
             <div class="col-sm-5">
               <ul class="list-group">
@@ -31,31 +31,35 @@
                 <li class="list-group-item" *ngIf="profile.email"><a href="emailto:{{profile.email}}">{{profile.email}}</a></li>
               </ul>
             </div>
-            <div class="col-sm-4">
-              <div>
-                <p>
-                  <span class="label">Followers {{profile.followers}} </span>
+            <div class="row col-md-12 ">
+              <div class="col-md-12 cover" style="background-color: rgba(0, 0, 0, .3); margin-left:150px;">
+                <div>
+                  <p class="col-md-12">
+                    <span class="label card">Followers {{profile.followers}} </span>
 
-                  <span class="label">Following {{profile.following}}</span>
+                    <span class="label card">Following {{profile.following}}</span>
 
-                  <span class="label">Repositories {{profile.public_repos}} </span>
-                </p>
-                <p><a href="{{profile.html_url}}" target="_blank" class="btn btn-md">View profile on Github</a></p>
-                <div class="panel">
-                  <div class="panel-heading">
-                    <h3 class="panel-heading">Repositories</h3>
-                  </div>
-                  <div class="panel-body" *ngFor="let repo of reposArray">
-                    <p class="clearfix">
-                      {{repo.name}} <a href="{{repo.html_url}}" target="_blank" class="btn btn-md pull-right">View this project on Github</a>
-                    </p>
-                    <p>{{repo.description}}</p>
-                  </div>
+                    <span class="label card">Repositories {{profile.public_repos}} </span>
+                  </p>
                 </div>
               </div>
+              <p><a href="{{profile.html_url}}" target="_blank" class="btn btn-md" style="margin-left:200px;text-decoration:none; color:white;">View profile on Github</a></p>
+              <div class="panel bg-info col-md-12" style="margin-left:600px; width:500px; background-color:rgba(0,0,0,.5); padding:10px;margin-top:-70px;">
+                <div class="panel-heading">
+                  <h3 class="panel-heading">Repositories</h3>
+                </div>
+                <div class="panel-body" *ngFor="let repo of reposArray">
+                  <p class="clearfix">
+                    {{repo.name}} <a href="{{repo.html_url}}" target="_blank" class="btn btn-md pull-right">View this project on Github</a>
+                  </p>
+                  <p>{{repo.description}}</p>
+                </div>
+              </div>
+
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
+</div>
