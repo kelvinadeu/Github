@@ -5,7 +5,7 @@
 #### This is a web app for searching github user
 
 ## Description
-#### This app enables user to create search for a github user easily and also shows their details like their repositories
+#### This app enables user to search for a github user easily and also shows their details like their repositories
 
 # Technologies used
 #### Angular.js
