@@ -39,7 +39,7 @@ export class GhProfileService {
       public_repos: number;
       html_url: string;
     }
-    let promise = new Promise((resolve, reject) => {
+    let promise = new Promise<ApiResponse>((resolve, reject) => {
       this.http.get(this.BaseUrl + this.username + this.FinalUrl).toPromise().then(response => {
         this.profile.name = response.json().name;
         this.profile.location = response.json().location;
@@ -80,11 +80,11 @@ export class GhProfileService {
 
         }
         console.log(this.reposArray);
-        // this.repos.name = response.name;
-        // this.repos.html_url = response.html_url;
-        // this.repos.description = response.description;
-        // resolve()
-        // console.log("Working2!");
+         //this.repos.name = response.name;
+         //this.repos.html_url = response.html_url;
+         //this.repos.description = response.description;
+         //resolve()
+         //console.log("Working2!");
         // console.log(response);
       },
         error => {
