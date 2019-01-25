@@ -32,6 +32,7 @@ kelvinadeu25@gmail.com
 ### link to my app
   ####  this the link to my github which
      gives easy access to my app.Copy the link and paste it on a new tab,and the app will open
+     https://kelvinadeu.github.io/Github/
      
 
 ## Licensed
