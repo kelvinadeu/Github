@@ -2,10 +2,10 @@
 
 ### KELVIN ADEU
 
-#### This is a quotes web app for creating apps.
+#### This is a web app for searching github user
 
 ## Description
-#### This app enables user to create quotes and also asign there names on it  also the date for the time it was created
+#### This app enables user to create search for a github user easily and also shows their details like their repositories
 
 # Technologies used
 #### Angular.js
@@ -15,6 +15,11 @@
 #### npm
 
 ## BDD
+you clikc on the search button it takes you to page where you can enter any users name
+you click on search 
+the persons details  appear
+you can also view the project in github jus have to click the button 
+to view my profile you also click on a button provided their 
 
 
 #### KNOWN BUGS
